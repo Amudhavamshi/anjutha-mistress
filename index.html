@@ -154,7 +154,7 @@
  -->
 
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -164,16 +164,15 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #c7058d, #2b6902e1); /* Updated gradient */
+            background: #f4f4f4;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            position: relative;
         }
 
         header {
             text-align: center;
             padding: 50px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: white;
         }
 
@@ -208,16 +207,6 @@
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% {
-                background-position: -1000px 0;
-            }
-            100% {
-                background-position: 1000px 0;
-            }
         }
 
         .card h2 {
@@ -253,13 +242,19 @@
         footer {
             text-align: center;
             padding: 20px;
-            background: #00181b86;
+            background: #333;
             color: white;
         }
 
         a {
-            color: #2575fc; /* Blue color for email */
+            color: white; /* Changed email link color to white */
             text-decoration: none;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #2575fc; /* Change color on hover */
         }
 
         .linkedin-logo {
@@ -268,42 +263,53 @@
             margin-right: 8px;
         }
 
-        /* Shining spotlight effect */
-        .spotlight {
-            position: absolute;
-            border-radius: 50%;
-            pointer-events: none;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 0 9999px rgba(255, 255, 255, 0.1);
-            transition: transform 0.2s ease;
-            animation: shine 1.5s infinite;
+        /* Responsive Styles */
+        @media (max-width: 140px) {
+            h1 {
+                font-size: 1.2em;
+            }
+
+            p {
+                font-size: 0.8em;
+            }
+
+            .card {
+                width: 100%; /* Make cards full width on very small screens */
+            }
+
+            footer {
+                padding: 10px;
+            }
         }
 
-        @keyframes shine {
-            0% {
-                transform: scale(1);
-                opacity: 0.5;
+        @media (min-width: 141px) and (max-width: 768px) {
+            h1 {
+                font-size: 2em;
             }
-            50% {
-                transform: scale(1.2);
-                opacity: 0.7;
+
+            p {
+                font-size: 1em;
             }
-            100% {
-                transform: scale(1);
-                opacity: 0.5;
+
+            .card {
+                width: 45%; /* Cards take up 45% on medium screens */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .card {
+                width: 30%; /* Standard card width for larger screens */
             }
         }
     </style>
 </head>
 
-<body onmousemove="updateSpotlight(event)">
+<body>
 
     <header>
         <h1>Anjutha A</h1>
         <p>Java Spring Developer</p>
-        <p>Email: <a href="mailto:anjuthaanandh@gmail.com">anjuthaanandh@gmail.com</a> | Phone: +91 87548 99901</p>
+        <p>Email: <a href="mailto:anjuthaanandh@gmail.com">anjuthaanandh@gmail.com</a> <br> <br> Phone: +91 87548 99901</p>
     </header>
 
     <div class="container">
@@ -340,16 +346,7 @@
         </p>
     </footer>
 
-    <div class="spotlight"></div>
-
-    <script>
-        function updateSpotlight(e) {
-            const spotlight = document.querySelector('.spotlight');
-            spotlight.style.left = `${e.clientX - 100}px`; // Adjust to center
-            spotlight.style.top = `${e.clientY - 100}px`; // Adjust to center
-        }
-    </script>
-
 </body>
 
 </html>
+
