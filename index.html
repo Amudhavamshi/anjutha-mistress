@@ -154,7 +154,7 @@
  -->
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -348,5 +348,251 @@
 
 </body>
 
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anjutha A - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #cb11a3, #57fc25);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+            font-size: larger;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0;
+            background: #ffd700;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: flex-start;
+            padding: 40px 20px;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 350px;
+            max-width: 400px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: rotateY(10deg);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #ffdd00, #ff6a00);
+        }
+
+        .card h2 {
+            color: #6a11cb;
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        .linkedin-logo {
+            width: 100px;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0; /* Remove side margins for small screens */
+            }
+
+            .container {
+                align-items: center;
+            }
+
+            .card {
+                width: 90%; /* Full width on smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Anjutha A</h1>
+        <p>Java Spring Developer</p>
+        <p>Email: <a href="mailto:anjuthaanandh@gmail.com">anjuthaanandh@gmail.com</a></p>
+        <p>Phone: +91 87548 99901</p>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#objective">Greetings</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Technical Skills</a>
+            <a href="#projects">Projects</a>
+        </div>
+    </nav>
+
+    <div class="container" id="objective">
+        <div class="card">
+            <h2>Greetings..!!</h2>
+            <p>Hi, Anjutha here. I am here to apply my skills in Java and web development in a challenging role as a Java Spring Developer, contributing to innovative projects and achieving organizational goals.</p>
+        </div>
+    </div>
+
+    <div class="container" id="education">
+        <div class="card">
+            <h2>Education</h2>
+            <p><strong>M.E. in Computer Science and Engineering</strong> (Pursuing, Expected 2025)</p>
+            <p><strong>B.E. in Electronics and Communication Engineering</strong>, 2018 (Percentage: 7.73)</p>
+            <p><strong>Higher Secondary</strong>, 2014 (Percentage: 91.25)</p>
+            <p><strong>Secondary Schooling</strong>, 2012 (Percentage: 95%)</p>
+        </div>
+    </div>
+
+    <div class="container" id="skills">
+        <div class="card">
+            <h2>Technical Skills</h2>
+            <p><strong>Programming Languages:</strong> Java, OOP Concepts, Multithreading</p>
+            <p><strong>Web Development:</strong> HTML, CSS, JavaScript, AngularJS</p>
+            <p><strong>Database Management:</strong> Microsoft SQL (DDL, DQL, DML), JDBC, JSON</p>
+            <p><strong>Tools:</strong> Eclipse, Visual Studio Code</p>
+        </div>
+    </div>
+
+    <div class="container" id="projects">
+        <div class="card">
+            <h2>Stock Management System</h2>
+            <p><strong>Description:</strong> Developed a system for managing stock with CRUD operations using JDBC.</p>
+            <p><strong>Tools:</strong> Eclipse, MySQL</p>
+        </div>
+
+        <div class="card">
+            <h2>Weather Forecasting App</h2>
+            <p><strong>Description:</strong> Developed an app for Weather Forecasting using AngularJS Framework.</p>
+            <p><strong>Tools:</strong> VS Code, JSON</p>
+        </div>
+
+        <div class="card">
+            <h2>Certifications</h2>
+            <p><strong>Core Java</strong>, <br> <strong>Core Web Design</strong>, <br> <strong>Angular JS Framework</strong></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Connect with me on >> 
+            <a href="https://www.linkedin.com/in/anjutha-anandhan-9430a4308" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn Logo" class="linkedin-logo">
+            </a>
+        </p>
+    </footer>
+
+</body>
+
 </html>
+
 
